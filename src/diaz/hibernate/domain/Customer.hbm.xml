@@ -1,0 +1,30 @@
+
+<?xml version="1.0" encoding="UTF-8" ?><!--关系描述文件-->
+
+
+<!--导入约束-->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--关系描述-->
+<hibernate-mapping package="diaz.hibernate.domain">
+    <class name="Customer" table="customer">
+        <id name="id" type="java.lang.Long" column="cust_id">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="name" type="java.lang.String" column="cust_name">
+        </property>
+        <property name="source" type="java.lang.String" column="cust_source">
+        </property>
+        <property name="industry" type="java.lang.String" column="cust_industry">
+        </property>
+        <property name="level" type="java.lang.String" column="cust_level">
+        </property>
+        <property name="address" type="java.lang.String" column="cust_address">
+        </property>
+        <property name="phone" type="java.lang.String" column="cust_phone">
+        </property>
+    </class>
+</hibernate-mapping>

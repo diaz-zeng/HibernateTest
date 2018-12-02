@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?><!--hibernate配置文件-->
+
+<!--导入配置约束-->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--数据库连接信息-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hiberenate_test</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="connection.password">0098</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property><!--数据库方言-->
+        <!--可选配置-->
+        <!--输出sql语句-->
+        <property name="hibernate.show_sql">true</property>
+        <!--按格式输出-->
+        <property name="hibernate.format_sql">true</property>
+        <!--DDL语言生成方式-->
+        <property name="hibernate.hbm2ddl.auto">update</property><!--update表示检测到实体类的映射配置与表结构不一致时更新表结构-->
+        <!--指定映射文件-->
+        <mapping resource="diaz/hibernate/domain/Customer.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
